@@ -1,0 +1,56 @@
+body{
+    margin: 250px auto;
+}
+#guess_game{
+    height: 400px;
+    width: 300px;
+}
+#guess_limit{
+    flex-direction: column;
+}
+#guess_limit h3{
+    font-size: 20px;
+}
+#guess_game h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+#guess_limit div input{
+    width: 80px;
+    height: 20px;
+    font-size: 15px;
+}
+#submit{
+    width: 65px;
+    height: 20px;
+}
+#output_guess{
+    margin: 20px;
+    flex-direction: column;
+}
+#output_guess h3{
+    font-size: 20px;
+}
+#guess{
+    width: 80px;
+    height: 20px;
+    font-size: 15px;
+    color: white;
+}
+#submit_guess{
+    width: 65px;
+    height: 20px;
+    font-size: 15px;
+}
+#display{
+    margin-top: 5px;
+    font-size: 17px;
+    width: 260px;
+}
+span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
