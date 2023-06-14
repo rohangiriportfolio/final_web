@@ -75,8 +75,16 @@ html {
     color: white;
 }
 
-#r1 div p,
+#home_para,
 #creations span {
+    height: 70px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+#about_para{
     height: 70px;
     text-align: center;
     margin: 0;
