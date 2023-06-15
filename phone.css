@@ -30,3 +30,8 @@ body,html{
 #call p{
     padding-top:45px;
 }
+.modal {
+    margin: auto;
+    position:fixed;
+    height: 150%;
+}
