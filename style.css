@@ -75,7 +75,6 @@ html {
     color: white;
 }
 
-#r1 div p,
 #creations span {
     height: 70px;
     text-align: center;
@@ -84,12 +83,49 @@ html {
     font-size: 1.3rem;
 }
 
+#type_effect {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(15) infinite alternate,
+        blink 800ms steps(15) infinite normal;
+    border-right: 2px solid black;
+}
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 48%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: rgb(0, 0, 0);
+    }
+
+    to {
+        border-color: transparent;
+    }
+}
+
 #home p {
+    height: 25px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
     color: blueviolet;
     font-weight: bold;
 }
 
 #about p {
+    height: 70px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
     color: rgb(0, 0, 66);
 }
 
