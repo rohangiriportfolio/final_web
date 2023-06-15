@@ -22,7 +22,29 @@
             <div><a href="#contact">Contact Me</a></div>
         </div>
     </nav>
-    <div id="feedback">Feedback</div>
+    <div id="feedback">
+        <a href="#popup_box">Feedback</a>
+    </div>
+    <div id="popup_box" class="modal">
+        <div id="content">
+            <form action="https://formspree.io/f/xpzeeldj" method="POST" id="contact_form">
+                <div id="feedback_popup">
+                    <input required type="text" id="name" name="Your Name" placeholder="Your Name">
+                    <input required type="email" id="email" placeholder="Email ID">
+                    <input required type="text" name="Your Feedback" placeholder="Feedback">
+                </div>
+                <div id="contact_form_submit">
+                    <input type="reset" value="Reset" id="reset">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
+            
+            <a href="#"
+               id="box-close">
+                ×
+            </a>
+        </div>
+    </div>
     <section>
         <div id="r1">
             <div id="home">
