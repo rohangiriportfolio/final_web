@@ -336,6 +336,7 @@ html {
 #feedback_popup input{
     font-size: 15px;
     height: 20px;
+    width: 200px;
     border-radius: 3px;
     margin: 20px auto;
     outline: none;
