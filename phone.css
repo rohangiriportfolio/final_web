@@ -27,6 +27,7 @@ body,html{
 #about_para{
     font-size: 0.5rem;
     color: darkblue;
+    text-decoration: underline;
 }
 #call p{
     padding-top:45px;
