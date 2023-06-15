@@ -35,12 +35,29 @@ body,html{
     position:fixed;
     height: 150%;
 }
+#type_effect {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(15) infinite alternate,
+        blink 800ms steps(15) infinite normal;
+    border-right: 2px solid black;
+}
 @keyframes typewriter {
     from {
         width: 0%;
     }
 
     to {
-        width: 61%;
+        width: 48%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: rgb(0, 0, 0);
+    }
+
+    to {
+        border-color: transparent;
     }
 }
