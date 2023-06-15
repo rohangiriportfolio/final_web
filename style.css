@@ -75,16 +75,8 @@ html {
     color: white;
 }
 
-#home_para,
+#r1 div p,
 #creations span {
-    height: 70px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-size: 1.3rem;
-}
-
-#about_para{
     height: 70px;
     text-align: center;
     margin: 0;
@@ -292,12 +284,99 @@ html {
     border: 1px solid white;
     border-radius: 10px;
 }
-
+#feedback a{
+    text-decoration: none;
+    color: black;
+}
 #feedback:hover {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
-
+#contact_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#submit{
+    font-size: 15px;
+    width: 60px;
+    height: 20px;
+    background-color: white;
+}
+#submit:hover{
+    border-radius: 10px;
+    background-color: rgba(118, 255, 100, 0.5);
+}
+#contact_form_submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#contact_form_submit button,#contact_form_submit input{
+    margin: 10px;
+}
+#reset{
+    font-size: 15px;
+    width: 55px;
+    height: 20px;
+    background-color: white;
+}
+#reset:hover{
+    border-radius: 10px;
+    background-color: rgba(141, 141, 255, 0.5);
+}
+#feedback_popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#feedback_popup input{
+    font-size: 15px;
+    height: 20px;
+    border-radius: 3px;
+    margin: 20px auto;
+    outline: none;
+}
+#feedback_popup input:hover{
+    background-color: rgb(231, 231, 231);
+}
+.modal {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.6);
+    transition: all 0.7s;
+    visibility: hidden;
+    opacity: 0;
+}
+#content {
+    position: absolute;
+    background: white;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 4px;
+}
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+#box-close {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: #fe0606;
+    text-decoration: none;
+    font-size: 30px;
+}
 #star {
     position: fixed;
     top: 50%;
