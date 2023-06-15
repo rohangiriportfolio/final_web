@@ -313,9 +313,11 @@ html {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 #contact_form_submit button,#contact_form_submit input{
-    margin: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 #reset{
     font-size: 15px;
@@ -338,7 +340,7 @@ html {
     height: 20px;
     width: 200px;
     border-radius: 3px;
-    margin: 20px auto;
+    margin: 15px auto;
     outline: none;
 }
 #feedback_popup input:hover{
@@ -357,6 +359,7 @@ html {
     transition: all 0.7s;
     visibility: hidden;
     opacity: 0;
+    z-index: 2;
 }
 #content {
     position: absolute;
