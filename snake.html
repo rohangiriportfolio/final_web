@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="snake.css">
     <title>Snake Game</title>
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="phone_snake.css">
 </head>
 <body id="main">
     <h1>Snake Game</h1>
@@ -12,5 +13,19 @@
     <p id="score">Score: 0</p>
     <canvas id="field" ></canvas>
     <script src="snake.js"></script>
+    <div id="main_btn">
+        <div id="sub_btn1">
+            <input type="text" value="&#x2190" onclick="left()" readonly>
+        </div>
+        <div>
+            <div id="sub_btn2">
+                <input type="text" value="&#x2191" onclick="up()" readonly>
+                <input type="text" value="&#x2193" onclick="down()" readonly>
+            </div>
+        </div>
+        <div id="sub_btn3">
+            <input type="text" value="&#x2192" onclick="right()" readonly>
+        </div>
+    </div>
 </body>
 </html>
