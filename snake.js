@@ -13,13 +13,13 @@ var foodY;
 var gameOver = false;
 var score = 0;
 
-window.onload = function () {
+window.onload = function load() {
     board = document.getElementById("field");
     board.height = total_row * blockSize;
     board.width = total_col * blockSize;
     context = board.getContext("2d");
     placeFood();
-    document.addEventListener("keyup", changeDirection);
+    document.addEventListener("keydown", changeDirection);
     setInterval(update, 300);
 }
 function update() {
@@ -64,26 +64,27 @@ function update() {
     if (snakeX < 0 || snakeX >= total_col * blockSize || snakeY < 0 || snakeY >= total_row * blockSize) {
         gameOver = true;
         document.getElementById('main').innerHTML = "";
-        document.getElementById('main').innerHTML = "Your Score: " + score;
-        document.getElementById('main').style.fontSize = "30px";
+        document.getElementById('main').innerHTML = "Your Score: " + score + "<br>" + "Reload the page to Restart..";
+        document.getElementById('main').style.fontSize = "16px";
+        document.getElementById('main').style.textAlign = "center";
         document.getElementById('main').style.margin = "300px auto";
-        document.getElementById('main').style.color = "rgb(245, 0, 212)";
-        document.getElementById('main').style.border = "2px solid blue";
+        document.getElementById('main').style.color = "rgb(255, 52, 160)";
+        document.getElementById('main').style.border = "2px solid rgb(22, 22, 255)";
         document.getElementById('main').style.width = "180px";
         document.getElementById('main').style.display = "flex";
         document.getElementById('main').style.justifyContent = "center";
         document.getElementById('main').style.alignItems = "center";
-
     }
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
             document.getElementById('main').innerHTML = "";
-            document.getElementById('main').innerHTML = "Your Score: " + score;
-            document.getElementById('main').style.fontSize = "30px";
+            document.getElementById('main').innerHTML = "Your Score: " + score + "<br>" + "Reload the page to Restart..";
+            document.getElementById('main').style.fontSize = "16px";
+            document.getElementById('main').style.textAlign = "center";
             document.getElementById('main').style.margin = "300px auto";
-            document.getElementById('main').style.color = "rgb(245, 0, 212)";
-            document.getElementById('main').style.border = "2px solid blue";
+            document.getElementById('main').style.color = "rgb(255, 52, 160)";
+            document.getElementById('main').style.border = "2px solid rgb(22, 22, 255)";
             document.getElementById('main').style.width = "180px";
             document.getElementById('main').style.display = "flex";
             document.getElementById('main').style.justifyContent = "center";
@@ -91,7 +92,30 @@ function update() {
         }
     }
 }
-
+function up() {
+    if (speedY != 1) {
+        speedX = 0;
+        speedY = -1;
+    }
+}
+function down() {
+    if (speedY != -1) {
+        speedX = 0;
+        speedY = 1;
+    }
+}
+function left() {
+    if (speedX != 1) {
+        speedX = -1;
+        speedY = 0;
+    }
+}
+function right() {
+    if (speedX != -1) {
+        speedX = 1;
+        speedY = 0;
+    }
+}
 function changeDirection(e) {
     if (e.code == "ArrowUp" && speedY != 1) {
         speedX = 0;
@@ -109,6 +133,7 @@ function changeDirection(e) {
         speedX = 1;
         speedY = 0;
     }
+
 }
 
 function placeFood() {
