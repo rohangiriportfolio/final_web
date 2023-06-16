@@ -54,3 +54,147 @@ input{
         width: 65px;
     }
 }
+@keyframes top_left_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(65px, 65px);
+	}
+}
+@keyframes bottom_right_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(-65px, -65px);
+	}
+}
+@keyframes top_right_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(-65px, 65px);
+	}
+}
+@keyframes bottom_left_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(65px, -65px);
+	}
+}
+@keyframes top_left_to_top_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(65px, 0px);
+	}
+}
+@keyframes top_right_to_top_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(-65px, 0px);
+	}
+}
+@keyframes left_middle_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(65px, 0px);
+	}
+}
+@keyframes right_middle_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(-65px, 0px);
+	}
+}
+@keyframes bottom_left_to_bottom_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(65px, 0px);
+	}
+}
+@keyframes bottom_right_to_bottom_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(-65px, 0px);
+	}
+}
+@keyframes top_left_to_left_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(0px, 65px);
+	}
+}
+@keyframes bottom_left_to_left_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(0px,-65px);
+	}
+}
+@keyframes top_middle_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(0px,65px);
+	}
+}
+@keyframes bottom_middle_to_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(0px,-65px);
+	}
+}
+@keyframes top_right_to_right_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(0px,65px);
+	}
+}
+@keyframes bottom_right_to_right_middle {
+    0% {
+		transform: translate(0px, 0px);
+	}
+
+	100% {
+		transform: translate(0px,-65px);
+	}
+}
