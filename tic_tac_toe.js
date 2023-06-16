@@ -323,19 +323,19 @@ function check() {
 function winner_X() {
     document.getElementById('tic_tac_toe').innerHTML = "";
     document.getElementById('tic_tac_toe').innerHTML = "<img src='winner.svg'>"+"X Wins!";
-    document.getElementById('tic_tac_toe').style = "font-size:50px;color:white;";
+    document.getElementById('tic_tac_toe').style = "font-size:48px;color:white;";
     document.getElementById('score').innerHTML = "";
 }
 function winner_O() {
     document.getElementById('tic_tac_toe').innerHTML = "";
     document.getElementById('tic_tac_toe').innerHTML = "<img src='winner.svg'>"+"O Wins!";
-    document.getElementById('tic_tac_toe').style = "font-size:50px;color:white;";
+    document.getElementById('tic_tac_toe').style = "font-size:48px;color:white;";
     document.getElementById('score').innerHTML = "";
 }
 function draw() {
     document.getElementById('tic_tac_toe').innerHTML = "";
     document.getElementById('tic_tac_toe').innerHTML = "<img src='draw.png'>"+"Draw:) Try Again!";
-    document.getElementById('tic_tac_toe').style = "font-size:30px;color:white;";
+    document.getElementById('tic_tac_toe').style = "font-size:23px;color:white;";
     document.getElementById('score').innerHTML = "";
 }
 function screen_lock() {
