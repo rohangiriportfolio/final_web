@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+input{
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+}
+.hr{
+    width: 201px;
+    margin: 17px;
+}
+.vr{
+    width: 65px;
+    margin: -16px;
+}
+#tic_tac_toe{
+    height: 200px;
+    width: 200px;
+}
+#turn1,
+#turn2{
+    height: 22px;
+    font-size: 12px;
+    width: 95px;
+    margin: 3px;
+}
+#score h1{
+    font-size: 33px;
+}
+#score h4{
+    font-size: 20px;
+}
+#score h5{
+    font-size: 15px;
+}
