@@ -34,3 +34,39 @@ h4{
     width: 375px;
     border: 5px solid rgb(100, 100, 100);
 }
+#main_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#sub_btn1 input,#sub_btn3 input{
+    height: 50px;
+    width: 60px;
+    margin: 10px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(100, 100, 100);
+    background: linear-gradient(45deg, rgb(22, 22, 255),rgb(255, 52, 160));
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+#sub_btn2 input{
+    height: 22px;
+    width: 60px;
+    margin: 2px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(100, 100, 100);
+    background: linear-gradient(45deg, rgb(22, 22, 255),rgb(255, 52, 160));
+    color: white;
+    font-weight: bold;
+}
+#sub_btn2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
