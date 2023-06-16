@@ -36,3 +36,21 @@ input{
 #score h5{
     font-size: 15px;
 }
+@keyframes expand1 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 201px;
+    }
+}
+@keyframes expand2 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 65px;
+    }
+}
