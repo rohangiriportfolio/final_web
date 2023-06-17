@@ -12,7 +12,12 @@ var foodX;
 var foodY;
 var gameOver = false;
 var score = 0;
-
+let move = new Audio();
+move.src="snake_move.mp3";
+let eat = new Audio();
+eat.src="snake_eat.mp3";
+let dead = new Audio();
+dead.src="snake_dead.wav";
 window.onload = function load() {
     board = document.getElementById("field");
     board.height = total_row * blockSize;
@@ -20,14 +25,17 @@ window.onload = function load() {
     context = board.getContext("2d");
     placeFood();
     document.addEventListener("keydown", changeDirection);
-    setInterval(update, 300);
+    setInterval(update, 400);
 }
+
 function update() {
     if (gameOver) {
+        
         speedX = 0;
         speedY = 0;
         return;
     }
+    
     var grad = context.createLinearGradient(0, 375, 375, 0);
     grad.addColorStop(0, 'rgb(22, 22, 255)');
     grad.addColorStop(1, 'rgb(255, 52, 160)');
@@ -38,6 +46,7 @@ function update() {
     context.strokestyle = 'darkgreen';
     context.strokeRect(foodX, foodY, blockSize, blockSize);
     if (snakeX == foodX && snakeY == foodY) {
+        eat.play();
         snakeBody.push([foodX, foodY]);
         placeFood();
         score++;
@@ -63,6 +72,8 @@ function update() {
     }
     if (snakeX < 0 || snakeX >= total_col * blockSize || snakeY < 0 || snakeY >= total_row * blockSize) {
         gameOver = true;
+        dead.play();
+        move.pause();
         document.getElementById('main').innerHTML = "";
         document.getElementById('main').innerHTML = "Your Score: " + score + "<br>" + "Reload the page to Restart..";
         document.getElementById('main').style.fontSize = "16px";
@@ -78,6 +89,8 @@ function update() {
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
+            dead.play();
+            move.pause();
             document.getElementById('main').innerHTML = "";
             document.getElementById('main').innerHTML = "Your Score: " + score + "<br>" + "Reload the page to Restart..";
             document.getElementById('main').style.fontSize = "16px";
@@ -96,42 +109,50 @@ function up() {
     if (speedY != 1) {
         speedX = 0;
         speedY = -1;
+        move.play();
     }
 }
 function down() {
     if (speedY != -1) {
         speedX = 0;
         speedY = 1;
+        move.play();
     }
 }
 function left() {
     if (speedX != 1) {
         speedX = -1;
         speedY = 0;
+        move.play();
     }
 }
 function right() {
     if (speedX != -1) {
         speedX = 1;
         speedY = 0;
+        move.play();
     }
 }
 function changeDirection(e) {
     if (e.code == "ArrowUp" && speedY != 1) {
         speedX = 0;
         speedY = -1;
+        move.play();
     }
     else if (e.code == "ArrowDown" && speedY != -1) {
         speedX = 0;
         speedY = 1;
+        move.play();
     }
     else if (e.code == "ArrowLeft" && speedX != 1) {
         speedX = -1;
         speedY = 0;
+        move.play();
     }
     else if (e.code == "ArrowRight" && speedX != -1) {
         speedX = 1;
         speedY = 0;
+        move.play();
     }
 
 }
