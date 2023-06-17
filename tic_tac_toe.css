@@ -4,7 +4,7 @@
 }
 
 section {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,7 +97,7 @@ input {
     width: 300px;
     background: linear-gradient(45deg, rgb(22, 22, 255),rgb(255, 52, 160));
     background-position: center;
-    margin: 50px auto;
+    margin: 30px auto;
     border: 3px solid gray;
 }
 
