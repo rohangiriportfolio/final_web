@@ -29,6 +29,25 @@ h4{
     border: 2px solid rgb(100, 100, 100);
     margin: 5px;
 }
+#highscore{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    background: linear-gradient(45deg, rgb(22, 22, 255),rgb(255, 52, 160));
+    border: 2px solid rgb(100, 100, 100);
+    margin: 5px;
+}
+#score_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 #field{
     height: 375px;
     width: 375px;
@@ -50,7 +69,7 @@ h4{
     border: 1px solid rgb(100, 100, 100);
     background: linear-gradient(45deg, rgb(22, 22, 255),rgb(255, 52, 160));
     color: rgb(255, 255, 255);
-    font-size: 30px;
+    font-size: 40px;
 }
 #sub_btn2 input{
     height: 22px;
@@ -62,11 +81,14 @@ h4{
     border: 1px solid rgb(100, 100, 100);
     background: linear-gradient(45deg, rgb(22, 22, 255),rgb(255, 52, 160));
     color: white;
-    font-weight: bold;
+    font-size: 18px;
 }
 #sub_btn2{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#reload_txt{
+    color: blue;
 }
