@@ -4,6 +4,11 @@ var xx = sessionStorage.getItem('scoreX');
 document.getElementById('turn2').innerHTML = "X: " + xx;
 var yy = sessionStorage.getItem('scoreY');
 document.getElementById('turn1').innerHTML = "Y: " + yy;
+function _reset(){
+    sessionStorage.removeItem("scoreX");
+    sessionStorage.removeItem("scoreY");
+    location.reload();
+}
 function display1() {
     if (times % 2 == 0) {
         document.getElementById('turn1').style = 'border-bottom: 2px solid cyan';
@@ -422,20 +427,18 @@ function check() {
 }
 function winner_X() {
     document.getElementById('tic_tac_toe').innerHTML = "";
-    document.getElementById('tic_tac_toe').innerHTML = "<img src='winner.svg'>" + "X Wins!";
+    document.getElementById('tic_tac_toe').innerHTML = "<img src='winner.svg'>"+"X Wins!";
     document.getElementById('tic_tac_toe').style = "font-size:50px;color:white;";
 }
 function winner_O() {
     document.getElementById('tic_tac_toe').innerHTML = "";
-    document.getElementById('tic_tac_toe').innerHTML = "<img src='winner.svg'>" + "O Wins!";
+    document.getElementById('tic_tac_toe').innerHTML = "<img src='winner.svg'>"+"O Wins!";
     document.getElementById('tic_tac_toe').style = "font-size:50px;color:white;";
 }
 function draw() {
     document.getElementById('tic_tac_toe').innerHTML = "";
-    document.getElementById('tic_tac_toe').innerHTML = "<img src='draw.png'>" + "Draw:) Try Again!";
+    document.getElementById('tic_tac_toe').innerHTML = "<img src='draw.png'>"+"Draw:) Try Again!";
     document.getElementById('tic_tac_toe').style = "font-size:23px;color:white;";
-    document.getElementById('turn1').style = 'border-bottom: 2px solid rgb(151, 151, 151)'
-    document.getElementById('turn2').style = 'border-bottom: 2px solid rgb(151, 151, 151)';
 }
 function screen_lock() {
     document.getElementById('btn1').disabled = true;
