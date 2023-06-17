@@ -8,8 +8,13 @@ body,html{
 }
 #r1 div,#r2 div{
     height: 300px;
-    width: 500px;
+    width: 690px;
 }
 #about p{
     font-size: 1rem;
+}
+.modal {
+    margin: auto;
+    position:fixed;
+    height: 150%;
 }
