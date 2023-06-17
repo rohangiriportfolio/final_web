@@ -12,12 +12,14 @@ var foodX;
 var foodY;
 var gameOver = false;
 var score = 0;
+var high = localStorage.getItem('high_score');
+document.getElementById('highscore').innerHTML = "High Score: " + high;
 let move = new Audio();
-move.src="snake_move.mp3";
+move.src = "snake_move.mp3";
 let eat = new Audio();
-eat.src="snake_eat.mp3";
+eat.src = "snake_eat.mp3";
 let dead = new Audio();
-dead.src="snake_dead.wav";
+dead.src = "snake_dead.wav";
 window.onload = function load() {
     board = document.getElementById("field");
     board.height = total_row * blockSize;
@@ -30,12 +32,12 @@ window.onload = function load() {
 
 function update() {
     if (gameOver) {
-        
+
         speedX = 0;
         speedY = 0;
         return;
     }
-    
+
     var grad = context.createLinearGradient(0, 375, 375, 0);
     grad.addColorStop(0, 'rgb(22, 22, 255)');
     grad.addColorStop(1, 'rgb(255, 52, 160)');
@@ -50,6 +52,14 @@ function update() {
         snakeBody.push([foodX, foodY]);
         placeFood();
         score++;
+        // localStorage.removeItem("high_score"); //To restore the high score to zero
+        // var high=0;
+        high = localStorage.getItem('high_score');
+        if (score > high) {
+            localStorage.setItem('high_score', score);
+            high++;   
+        }
+        document.getElementById('highscore').innerHTML = "High Score: " + high;
         document.getElementById('score').innerHTML = "Score: " + score;
     }
     for (let i = snakeBody.length - 1; i > 0; i--) {
@@ -74,34 +84,12 @@ function update() {
         gameOver = true;
         dead.play();
         move.pause();
-        document.getElementById('main').innerHTML = "";
-        document.getElementById('main').innerHTML = "Your Score: " + score + "<br>" + "Reload the page to Restart..";
-        document.getElementById('main').style.fontSize = "16px";
-        document.getElementById('main').style.textAlign = "center";
-        document.getElementById('main').style.margin = "300px auto";
-        document.getElementById('main').style.color = "rgb(255, 52, 160)";
-        document.getElementById('main').style.border = "2px solid rgb(22, 22, 255)";
-        document.getElementById('main').style.width = "180px";
-        document.getElementById('main').style.display = "flex";
-        document.getElementById('main').style.justifyContent = "center";
-        document.getElementById('main').style.alignItems = "center";
     }
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOver = true;
             dead.play();
             move.pause();
-            document.getElementById('main').innerHTML = "";
-            document.getElementById('main').innerHTML = "Your Score: " + score + "<br>" + "Reload the page to Restart..";
-            document.getElementById('main').style.fontSize = "16px";
-            document.getElementById('main').style.textAlign = "center";
-            document.getElementById('main').style.margin = "300px auto";
-            document.getElementById('main').style.color = "rgb(255, 52, 160)";
-            document.getElementById('main').style.border = "2px solid rgb(22, 22, 255)";
-            document.getElementById('main').style.width = "180px";
-            document.getElementById('main').style.display = "flex";
-            document.getElementById('main').style.justifyContent = "center";
-            document.getElementById('main').style.alignItems = "center";
         }
     }
 }
