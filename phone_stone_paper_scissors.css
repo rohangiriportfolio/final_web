@@ -1,6 +1,6 @@
 #main{
     width: 265px;
-    height: 265px;
+    height: 330px;
 }
 #y_heading,#c_heading{
     font-size: 13px;
@@ -16,25 +16,16 @@ h4{
     font-size: 12px;
 }
 input{
-    width: 45px;
-    height: 20px;
-    margin: auto 30px;
+    width: 70px;
+    height: 30px;
+    margin: auto 25px;
 }
 #c_heading{
     margin-top: 0;
 }
 #c_move{
-    margin-top: 28px;
-    margin-bottom: 10px;
-}
-#y_move_stone{
-    background: url('_st.png') no-repeat center;
-}
-#y_move_paper{
-    background: url('_p.png') no-repeat center;
-}
-#y_move_scissors{
-    background: url('_sc.png') no-repeat center;
+    margin-top: 38px;
+    margin-bottom: 30px;
 }
 #y_score,#c_score{
     font-size: 7px;
