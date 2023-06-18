@@ -31,7 +31,6 @@ input{
     align-items: center;
     width: 200px;
 }
-
 #move{
     display: flex;
     flex-direction: row;
